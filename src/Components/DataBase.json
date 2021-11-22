@@ -1,0 +1,20 @@
+[
+  {
+    "node" : ["var axios = require(`axios`).default; var options = { method: 'GET', url: 'https://theApiUrl.com/getMethod', }; axios.get(options).then(function (response) { console.log(response.data); }).catch(function (error) { console.error(error); })}"]
+
+  },
+  {
+    "php" :"<?php $request = new HttpRequest() $request->setUrl('https://theApiUrl.com/getMethod'); $request->setMethod(HTTP_METH_GET); try{ $response = $request->send() echo $request->getBody()}catch(HttpException $ex) echo $ex}"
+  },
+
+   {
+     "c" : [
+       "var client = new HttpClient()var request = new HttpRequestMessage;{Method = HttpMethod.Get,RequestUri = new Uri('https://theApiUrl.com/getMethod')}using (var response = await client.SendAsync(request)){  response.EnsureSuccessStatusCode();   var body = await response.Content.ReadAsStringAsync(); Console.WriteLine(body); }"
+     ]
+   },
+   {
+     "java" : [
+       "AsyncHttpClient client = new DefaultAsyncHttpClient();client.prepare('GET', 'https://api-basketball.p.rapidapi.com/timezone')    .execute().toCompletableFuture().   thenAccept(System.out::println)join();client.close();"
+     ]
+   }
+]
